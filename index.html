@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Учебник</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #333;
+    }
+    section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    section pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    section code {
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Учебник</h1>
+  </header>
+  <div class="container">
+    <section id="data-types">
+      <h2>Типы данных</h2>
+      <p>В JavaScript существует несколько основных типов данных:</p>
+      <ul>
+        <li><strong>Числа (Numbers)</strong>: целые числа и числа с плавающей точкой.</li>
+        <li><strong>Строки (Strings)</strong>: последовательности символов, заключенные в кавычки.</li>
+        <li><strong>Логический (Boolean)</strong>: логическое значение true или false.</li>
+        <li><strong>Undefined</strong>: значение переменной, если оно не было присвоено.</li>
+        <li><strong>Null</strong>: значение, которое отсутствует или не существует.</li>
+        <li><strong>Объекты (Objects)</strong>: коллекции ключ-значение и объекты, включая функции.</li>
+        <li><strong>Массивы (Arrays)</strong>: упорядоченные списки значений.</li>
+      </ul>
+    </section>
+
+    <section id="alert-prompt-confirm">
+      <h2>alert, prompt, confirm</h2>
+      <p>Встроенные функции для взаимодействия с пользователем:</p>
+      <ul>
+        <li><strong>alert</strong>: выводит диалоговое окно с сообщением.</li>
+        <li><strong>prompt</strong>: выводит диалоговое окно с текстовым полем для ввода.</li>
+        <li><strong>confirm</strong>: выводит диалоговое окно с подтверждением (OK/Отмена).</li>
+      </ul>
+      <p>Пример использования:</p>
+      <pre><code>alert("Привет, мир!");
+let name = prompt("Введите ваше имя:", "");
+let result = confirm("Вы уверены?");</code></pre>
+    </section>
+
+    <section id="variables">
+      <h2>Переменные</h2>
+      <p>Переменная в JavaScript используется для хранения данных:</p>
+      <pre><code>let age = 30;
+const name = "John";</code></pre>
+    </section>
+
+    <section id="console-log">
+      <h2>console.log</h2>
+      <p>Метод <strong>console.log</strong> используется для вывода информации в консоль:</p>
+      <pre><code>console.log("Привет, мир!");</code></pre>
+    </section>
+
+    <section id="if-else">
+      <h2>if/else</h2>
+      <p>Условные операторы <strong>if</strong> и <strong>else</strong> используются для выполнения кода при определенных условиях:</p>
+      <pre><code>let age = 18;
+if (age >= 18) {
+  console.log("Доступ разрешен");
+} else {
+  console.log("Доступ запрещен");
+}</code></pre>
+    </section>
+
+    <section id="nullish-coalescing">
+      <h2>?? и ||</h2>
+      <p>Операторы <strong>??</strong> и <strong>||</strong> используются для работы с значениями по умолчанию:</p>
+      <pre><code>let username = currentUser ?? "Гость";
+let option = someOption || defaultValue;</code></pre>
+    </section>
+
+    <section id="loops">
+      <h2>for/while</h2>
+      <p>Циклы <strong>for</strong> и <strong>while</strong> используются для повторения выполнения кода:</p>
+      <pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}</code></pre>
+    </section>
+
+    <section id="functions">
+      <h2>Функции</h2>
+      <p>Функции в JavaScript используются для организации кода в более мелкие блоки:</p>
+      <pre><code>function greet(name) {
+  console.log("Привет, " + name);
+}
+greet("John");</code></pre>
+    </section>
+
+    <section id="switch">
+      <h2>switch</h2>
+      <p>Оператор <strong>switch</strong> используется для выбора одного из множества блоков кода для выполнения:</p>
+      <pre><code>let day = new Date().getDay();
+switch (day) {
+  case 0:
+    console.log("Воскресенье");
+    break;
+  case 1:
+    console.log("Понедельник");
+    break;
+  default:
+    console.log("День недели");
+}</code></pre>
+    </section>
+
+    <section id="comments">
+      <h2>Комментарии</h2>
+      <p>Комментарии используются для описания кода и не выполняются интерпретатором JavaScript:</p>
+      <pre><code>// Однострочный комментарий
+/*
+  Многострочный
+  комментарий
+*/</code></pre>
+    </section>
+
+    <section id="debugger">
+      <h2>debugger</h2>
+      <p>Команда <strong>debugger</strong> используется для остановки выполнения JavaScript кода в отладчике браузера:</p>
+      <pre><code>function calc() {
+  let x = 10;
+  debugger;
+  console.log(x * 2);
+}
+calc();</code></pre>
+    </section>
+
+    <section id="object">
+      <h2>Object</h2>
+      <p>Объекты в JavaScript используются для хранения коллекций данных и свойств:</p>
+      <pre><code>let person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log("Привет!");
+  }
+};
+console.log(person.name); // "John"
+person.greet(); // "Привет!"</code></pre>
+    </section>
+
+    <section id="this">
+      <h2>this</h2>
+      <p>Ключевое слово <strong>this</strong> ссылается на текущий объект в контексте выполнения кода:</p>
+      <pre><code>let person = {
+  name: "John",
+  greet: function() {
+    console.log("Привет, " + this.name);
+  }
+};
+person.greet(); // "Привет, John"</code></pre>
+    </section>
+
+    <section id="object-methods">
+      <h2>Object.keys, values, entries</h2>
+      <p>Методы <strong>Object.keys</strong>, <strong>Object.values</strong> и <strong>Object.entries</strong> используются для работы с объектами:</p>
+      <pre><code>let user = {
+  name: "John",
+  age: 30
+};
+console.log(Object.keys(user)); // ["name", "age"]
+console.log(Object.values(user)); // ["John", 30]
+console.log(Object.entries(user)); // [["name", "John"], ["age", 30]]</code></pre>
+    </section>
+
+    <section id="date">
+      <h2>new Date()</h2>
+      <p>Конструктор <strong>new Date()</strong> создает объект Date, представляющий текущую дату и время:</p>
+      <pre><code>let today = new Date();
+console.log(today); // текущая дата и время</code></pre>
+    </section>
+
+    <section id="recursion">
+      <h2>Рекурсия</h2>
+      <p>Рекурсия в JavaScript - это процесс вызова функции из самой себя:</p>
+      <pre><code>function countDown(num) {
+  if (num <= 0) return;
+  console.log(num);
+  countDown(num - 1);
+}
+countDown(5);</code></pre>
+    </section>
+
+    <section id="closure">
+      <h2>Замыкание</h2>
+      <p>Замыкание - это функция, которая запоминает свое лексическое окружение:</p>
+      <pre><code>function makeCounter() {
+  let count = 0;
+  return function() {
+    return count++;
+  };
+}
+let counter = makeCounter();
+console.log(counter()); // 0
+console.log(counter()); // 1</code></pre>
+    </section>
+
+    <section id="timers">
+      <h2>setTimeout, setInterval</h2>
+      <p>Функции <strong>setTimeout</strong> и <strong>setInterval</strong> используются для выполнения кода через определенный промежуток времени:</p>
+      <pre><code>setTimeout(function() {
+  console.log("Привет, мир!");
+}, 2000);
+
+let intervalId = setInterval(function() {
+  console.log("Интервал");
+}, 1000);</code></pre>
+    </section>
+
+    <section id="rest-spread">
+      <h2>Остаточные параметры и оператор расширения</h2>
+      <p>Остаточные параметры и оператор расширения позволяют работать с неопределенным числом аргументов:</p>
+      <pre><code>function sum(...args) {
+  return args.reduce((acc, val) => acc + val, 0);
+}
+let numbers = [1, 2, 3, 4];
+console.log(sum(...numbers)); // 10</code></pre>
+    </section>
+
+    <section id="proto">
+      <h2>__proto__</h2>
+      <p>Свойство <strong>__proto__</strong> используется для доступа к прототипу объекта:</p>
+      <pre><code>let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+rabbit.__proto__ = animal;
+console.log(rabbit.eats); // true</code></pre>
+    </section>
+
+    <section id="arrays">
+      <h2>Массивы</h2>
+      <p>Массивы в JavaScript используются для хранения упорядоченных коллекций данных:</p>
+      <pre><code>let numbers = [1, 2, 3, 4];
+console.log(numbers.length); // 4
+console.log(numbers[0]); // 1</code></pre>
+    </section>
+
+    <section id="bom-dom">
+      <h2>BOM и DOM</h2>
+      <p>Объекты <strong>BOM (Browser Object Model)</strong> и <strong>DOM (Document Object Model)</strong> предоставляют методы и интерфейсы для взаимодействия с браузером и HTML-документом:</p>
+      <pre><code>// Пример работы с DOM
+let element = document.getElementById("myElement");
+element.textContent = "Новый текст";</code></pre>
+    </section>
+
+    <section id="fetch">
+      <h2>fetch</h2>
+      <p>Функция <strong>fetch</strong> используется для отправки HTTP запросов и получения ответов:</p>
+      <pre><code>fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Ошибка:', error));</code></pre>
+    </section>
+
+    <section id="cookies-localstorage">
+      <h2>cookie, localStorage</h2>
+      <p>Куки и <strong>localStorage</strong> используются для хранения данных на стороне клиента:</p>
+      <pre><code>// Установка значения в localStorage
+localStorage.setItem('username', 'John');
+
+// Получение значения из localStorage
+let username = localStorage.getItem('username');</code></pre>
+    </section>
+
+    <section id="regex">
+      <h2>Регулярные выражения</h2>
+      <p>Регулярные выражения используются для работы с текстовыми данными, для поиска и замены:</p>
+      <pre><code>let text = "Пример текста";
+let pattern = /текст/;
+console.log(pattern.test(text)); // true</code></pre>
+    </section>
+
+    <section id="promises">
+      <h2>Промисы</h2>
+      <p>Промисы используются для работы с асинхронными операциями и управления последовательностью выполнения кода:</p>
+      <pre><code>let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Готово!"), 1000);
+});
+
+promise.then(result => console.log(result)); // "Готово!"</code></pre>
+    </section>
+
+    <section id="callbacks">
+      <h2>Колбэки</h2>
+      <p>Колбэки - это функции, которые передаются в качестве аргумента другой функции и вызываются после завершения операции:</p>
+      <pre><code>function fetchData(callback) {
+  setTimeout(() => {
+    let data = "Данные загружены";
+    callback(data);
+  }, 2000);
+}
+
+fetchData(data => console.log(data)); // "Данные загружены"</code></pre>
+    </section>
+
+    <section id="async-await">
+      <h2>async/await</h2>
+      <p>Асинхронные функции и ключевые слова <strong>async</strong>/<strong>await</strong> используются для упрощения работы с асинхронным кодом:</p>
+      <pre><code>async function fetchData() {
+  let response = await fetch('https://api.example.com/data');
+  let data = await response.json();
+  return data;
+}</code></pre>
+    </section>
+
+    <section id="event-bubbling">
+      <h2>Всплытие и погружение событий</h2>
+      <p>Всплытие и погружение событий описывают порядок обработки событий в DOM:</p>
+      <pre><code>document.addEventListener('click', function(event) {
+  console.log('Кликнуто на элемент', event.target);
+}, true);</code></pre>
+    </section>
+
+    <section id="json">
+      <h2>JSON</h2>
+      <p>JSON (JavaScript Object Notation) используется для передачи данных между сервером и клиентом:</p>
+      <pre><code>let user = {
+  name: "John",
+  age: 30,
+  isAdmin: false
+};
+let json = JSON.stringify(user);
+console.log(json); // {"name":"John","age":30,"isAdmin":false}</code></pre>
+    </section>
+
+    <section id="setAttribute-getAttribute">
+      <h2>setAttribute, getAttribute</h2>
+      <p>Методы <strong>setAttribute</strong> и <strong>getAttribute</strong> используются для работы с атрибутами элементов DOM:</p>
+      <pre><code>let element = document.getElementById('myElement');
+element.setAttribute('data-id', '123');
+let id = element.getAttribute('data-id');</code></pre>
+    </section>
+
+    <section id="array-methods">
+      <h2>Методы массивов</h2>
+      <p>Методы массивов в JavaScript используются для манипуляции с элементами массива:</p>
+      <pre><code>let numbers = [1, 2, 3, 4];
+numbers.push(5); // добавление в конец массива
+numbers.pop(); // удаление последнего элемента
+numbers.splice(1, 1); // удаление элемента по индексу</code></pre>
+    </section>
+
+    <section id="operators">
+      <h2>Все операторы</h2>
+      <p>В JavaScript существует множество операторов для выполнения различных операций:</p>
+      <pre><code>// Арифметические операторы
+let sum = 1 + 2;
+let difference = 5 - 3;
+let product = 4 * 6;
+let quotient = 10 / 2;
+
+// Операторы сравнения
+let isEqual = 5 === 5;
+let isNotEqual = 10 !== "10";
+let greaterThan = 6 > 4;
+let lessThanOrEqual = 3 <= 3;
+
+// Логические операторы
+let andOperator = true && false;
+let orOperator = true || false;
+let notOperator = !true;
+
+// Операторы присваивания
+let x = 5;
+x += 2; // x = x + 2;
+
+// Побитовые операторы
+let a = 5 & 1; // побитовое И
+let b = 5 | 1; // побитовое ИЛИ
+let c = ~5; // побитовое НЕ</code></pre>
+    </section>
+  </div>
+</body>
+</html>
